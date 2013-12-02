@@ -14,12 +14,15 @@
     <%= project.status %>
   </p>
   
+  <% if admin? %>
   <p>|
     <%= link_to 'Show', project %> |
     <%= link_to 'Edit', edit_project_path(project) %> |
     <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %> |
   </p>
-
+  
+  <% end %>
+  
   <hr>
 
 <% end %>
@@ -27,4 +30,15 @@
 
 <br>
 
-<%= link_to 'New Project', new_project_path %>
+<% if admin? %>
+  <%= link_to 'New Project', new_project_path %>
+<% end %>
+
+<br><br><br><br><br>
+<small>
+  <% if admin? %>
+    <%= link_to "Sign Out", signout_path, method: "delete" %>
+  <% else %>
+    <%= link_to "Sign In", signin_path %>
+  <% end %>
+</small>

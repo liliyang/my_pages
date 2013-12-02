@@ -1,10 +1,15 @@
 MyPages::Application.routes.draw do
   resources :projects
   
+  resources :sessions, only: [:new, :create, :destroy]
+  
   match 'about_me' => 'projects#about', :as => 'about', via: :get
   match 'purpose' => 'projects#purpose', :as => 'purpose', via: :get
   
   root to: 'projects#purpose'
+  
+  match 'signin' => 'sessions#new', via: :get
+  match 'signout' => 'sessions#destroy', via: :delete
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
