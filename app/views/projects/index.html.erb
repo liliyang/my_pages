@@ -1,0 +1,30 @@
+<h2>Listing Current Projects</h2>
+
+<div class="project_list">
+<% @projects.each do |project| %>
+
+  <h3><%= link_to project.title, project_path(project)%></h3>
+  
+  <p>
+    <strong>Brief Description: </strong>
+    <%= simple_format(project.brief) %>
+  </p>  
+  <p>
+    <strong>Status: </strong>
+    <%= project.status %>
+  </p>
+  
+  <p>|
+    <%= link_to 'Show', project %> |
+    <%= link_to 'Edit', edit_project_path(project) %> |
+    <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %> |
+  </p>
+
+  <hr>
+
+<% end %>
+</div>
+
+<br>
+
+<%= link_to 'New Project', new_project_path %>

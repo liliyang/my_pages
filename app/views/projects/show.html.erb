@@ -1,0 +1,30 @@
+<h2><%= @project.title %></h2>
+
+<p>
+  <strong>Description:</strong>
+  <%= simple_format(@project.description) %>
+</p>
+
+<% unless @project.link.blank? %>
+<p>
+  <strong>
+    Find the website <%= link_to 'HERE', @project.link %>
+  </strong>
+</p>
+<% end %>
+
+<p>
+  <strong>Status:</strong>
+  <%= @project.status %>
+</p>
+<p>
+  <strong>Timeline:</strong>
+  <%= simple_format(@project.timeline) %>
+</p>
+<p>
+  <strong>Things to Come:</strong>
+  <%= simple_format(@project.todo) %>
+</p>
+
+
+<%= link_to 'Back to Projects', projects_path %>

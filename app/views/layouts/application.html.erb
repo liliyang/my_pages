@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Project Pages</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="headline">
+    <h1>Welcome to My Project Pages!</h1>
+  </div>
+
+  <div class="top_menu">|
+    <%= link_to 'My Projects', projects_path %> |
+    <%= link_to 'About Me', about_path %> |
+    <%= link_to 'About This Site', purpose_path %> |
+  </div>
+  
+  <div class="general_layout">
+    <p id="alert"><%= alert %></p>
+    <p id="notice"><%= notice %></p>
+    
+    <%= yield %>
+  </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+
+body {
+  background-image: url('wet_snow.png');
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+  height: 100%;
+}
+
+h2 {
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #333;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+input, textarea, select {
+  border: 1px solid #bbb;
+  width: 25%;
+  margin-bottom:15px;
+}
+
+textarea {
+  width: 35%;
+  height: 150px;
+}
+
+hr {
+  border-top: 4px double #3F4D4D;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  width: 500px;
+  height: 5px;
+  text-align: center;
+}
+
+.headline {
+  text-align: center;
+  background-image: url('abstract-background-4.jpg');
+  height: 100px;
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #333;
+  h1 {
+    color: white;
+    font-family: "Comic Sans", "Comic Sans MS", cursive;
+    font-size: 36px;
+    line-height: 54px;
+    vertical-align: middle;
+    text-shadow: 0 1px 1px white;
+  }
+}
+ 
+.top_menu {
+  text-align: center;
+  background-color: #8BD5FE;
+  width: 100%;
+  line-height: 36px;
+  height: 36px;
+  vertical-align: middle;
+  border-style: double;
+  border-width: 4px;
+  
+}
+
+.general_layout {
+  height: 100%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+}
+
+#notice {
+  color: #255816;
+}
+
+#alert {
+  color: red;
+}
+
+.field_with_errors {
+  display: inline;
+  width: 100%;
+  label {
+    font-weight: bold;
+    color: red;
+  }
+  input {
+    border-color: red;
+  }
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #E2E9E1;
+    border: 0;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
