@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   # POST /sessions
   def create
     if params[:session][:password] = ENV["ADMIN_PASSWORD"]
-      session[:admin] = true
+      session[:admin_my_pages_369] = true
       redirect_to projects_path
     else
       flash.now[:alert] = 'Invalid Password!'
