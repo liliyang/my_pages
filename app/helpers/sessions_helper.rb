@@ -1,7 +1,7 @@
 module SessionsHelper
   
   def admin?
-    session[:admin_my_pages_369]
+    session[ENV["ADMIN"]]
   end
   
   # Check for admin
