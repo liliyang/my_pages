@@ -2,9 +2,9 @@ class CreateProjects < ActiveRecord::Migration
   def change
     create_table :projects do |t|
       t.string :title
-      t.string :description
+      t.text :description
       t.string :status
-      t.string :todo
+      t.text :todo
 
       t.timestamps
     end
