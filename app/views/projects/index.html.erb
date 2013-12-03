@@ -9,6 +9,13 @@
     <strong>Brief Description: </strong>
     <%= simple_format(project.brief) %>
   </p>  
+  <% unless project.link.blank? %>
+  <p>
+    <strong>
+      Find the website <%= link_to 'HERE', project.link %>
+    </strong>
+  </p>
+  <% end %>
   <p>
     <strong>Status: </strong>
     <%= project.status %>
